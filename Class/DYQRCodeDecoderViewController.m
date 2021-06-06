@@ -219,7 +219,7 @@ UIImagePickerControllerDelegate> {
         //create path
         UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
-        [path appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(SCREEN_WIDTH / 6, SCREEN_HEIGHT / 2 - SCREEN_WIDTH / 3, frameWidth, frameWidth) cornerRadius:0] bezierPathByReversingPath]];
+        [path appendPath:[[UIBezierPath bezierPathWithRoundedRect:CGRectMake(SCREEN_WIDTH / 6, SCREEN_HEIGHT / 2 - SCREEN_WIDTH / 3 - 44, frameWidth, frameWidth) cornerRadius:0] bezierPathByReversingPath]];
         
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         
