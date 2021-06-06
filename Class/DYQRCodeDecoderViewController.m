@@ -288,7 +288,7 @@ UIImagePickerControllerDelegate> {
     NSString *result = feature.messageString;
     
     if (result == nil) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Couldn't find QR code" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"QR Code not found" message:nil preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* noButton = [UIAlertAction
                                       actionWithTitle:@"Ok"
                                       style:UIAlertActionStyleDefault
