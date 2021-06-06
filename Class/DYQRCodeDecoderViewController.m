@@ -286,6 +286,18 @@ UIImagePickerControllerDelegate> {
     CIQRCodeFeature *feature = [features firstObject];
     
     NSString *result = feature.messageString;
+    
+    if (result == nil) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Couldn't find QR code" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* noButton = [UIAlertAction
+                                      actionWithTitle:@"Ok"
+                                      style:UIAlertActionStyleDefault
+                                   handler:nil];
+        [alert addAction:noButton];
+        [self presentViewController:alert animated:true completion: nil];
+        return;
+    }
+    
     if (_completion) {
         _completion(result != nil, result);
     }
